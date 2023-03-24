@@ -1,11 +1,28 @@
+//variables
+$simple-orange: #e64448;
+$white: #fff;
+$off-yellow: #eab244;
+$dark-grey: #3c3a48;
+$off-white: #e1e2df;
+$pale-blue: #89c5c7;
+$dark-blue: #0b354b;
+$light-grey: #696c6d;
+
+//mixins
+@mixin standard-padding {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 5px;
+}
+
 body {
   width: 400px;
   margin: auto;
-  background-color: #e64448;
+  background-color: $simple-orange;
 }
 
 header {
-  background-color: #fff;
+  background-color: $white;
   padding-left: 5px;
 }
 
@@ -17,33 +34,29 @@ header {
 
 .local {
   display: block;
-  background-color: #e64448;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 5px;
+  background-color: $simple-orange;
+  @include standard-padding;
 
   h1 {
-    color: #3c3a48;
+    color: $dark-grey;
   }
   p {
-    color: #eab244;
+    color: $off-yellow;
   }
 }
 
 .bikes {
-  background-color: #e1e2df;
+  background-color: $off-white;
   text-align: center;
 }
 
 .signup {
   display: block;
-  background-color: #89c5c7;
-  color: #0b354b;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 5px;
+  background-color: $pale-blue;
+  color: $dark-blue;
+  @include standard-padding;
   h1 {
-    color: #696c6d;
+    color: $light-grey;
   }
   label {
     display: block;
@@ -57,14 +70,12 @@ header {
 
 .about {
   display: block;
-  background-color: #eab244;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 5px;
+  background-color: $off-yellow;
+  @include standard-padding;
   h1 {
-    color: #e64448;
+    color: $simple-orange;
   }
   p {
-    color: #e1e2df;
+    color: $off-white;
   }
 }
